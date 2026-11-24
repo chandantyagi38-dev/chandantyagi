@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chandan Tyagi</title>
+<meta name="description" content="Chandan Tyagi — Head of Operations, insurance operations and process transformation, Bengaluru.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: a calm, confident operator's page; plain statements, no hype.
+   IDEA: an operations blueprint — the page reads like a process map that runs.
+   PICTURE: a live flow diagram from intake to outcome, a red token travelling the rules.
+   COLOUR and TYPE: white, ink, one red accent, slate support, pale panels; Source Serif 4 + Inter.
+   LAYOUT: red tab nav, full-width headline, diagram band, rule-divided panels on one baseline. */
+:root{color-scheme:light dark;
+--bg:light-dark(#ffffff,#10191e);--ink:light-dark(#121212,#eef2f4);--mute:light-dark(#4a5560,#a9b6be);
+--red:light-dark(#e3120b,#ff4a3d);--slate:light-dark(#2e6f8e,#7fb7d2);--panel:light-dark(#e3ecf0,#17252c);
+--rule:light-dark(#d3dde2,#2a3a42)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding:clamp(28px,4vw,64px) max(5vw,16px)}
+h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:600;line-height:1.05;text-wrap:balance;margin:0}
+h1{font-size:clamp(34px,5vw,52px);max-width:20ch}
+h2{font-size:clamp(28px,3.4vw,38px);margin-bottom:24px}
+h3{font-size:21px;line-height:1.2;margin-bottom:8px}
+p{margin:0 0 12px;max-width:68ch}
+.lede{font-size:17px;color:var(--mute);margin-top:18px}
+
+/* nav */
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--rule)}
+nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;padding:0 max(5vw,16px);max-width:1240px;margin:0 auto;min-height:60px}
+.tab{background:var(--red);color:#fff;font-weight:600;text-decoration:none;padding:18px 16px 14px;margin-right:auto;font-family:"Source Serif 4",Georgia,serif;font-size:18px;line-height:1}
+nav a:not(.tab){text-decoration:none;font-size:15px;color:var(--mute);padding:10px 0}
+nav a:not(.tab):hover,nav a:not(.tab):focus-visible{color:var(--ink)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:22px;font-size:15px}
+.meta span{white-space:nowrap}
+.meta b{color:var(--slate);font-weight:600}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;font:600 15px Inter,sans-serif;text-decoration:none;border:1.5px solid var(--ink);background:none;color:var(--ink);cursor:pointer}
+.btn.primary{background:var(--red);border-color:var(--red);color:#fff}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--slate);outline-offset:3px}
+.fig{position:relative;min-height:340px;background:var(--panel)}
+.fig>svg{position:absolute;inset:0;width:100%;height:100%}
+.figcap{font-size:13px;color:var(--mute);margin-top:8px}
+
+/* panels */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));border-top:2px solid var(--ink)}
+.cell{padding:22px 22px 26px 0;border-bottom:1px solid var(--rule)}
+.grid .cell+.cell{padding-left:22px;border-left:1px solid var(--rule)}
+.cell p{color:var(--mute);font-size:16px;margin:0}
+.kicker{display:block;font-size:13px;color:var(--red);font-weight:600;margin-bottom:10px}
+
+.panel{background:var(--panel)}
+.work{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:2px;background:var(--rule)}
+.work article{background:var(--panel);padding:26px}
+.work p{color:var(--mute);margin:0}
+.work .tag{font-size:13px;color:var(--slate);font-weight:600;margin-bottom:8px;display:block}
+
+/* experience */
+.xp{border-top:2px solid var(--ink)}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:8px 32px;padding:22px 0;border-bottom:1px solid var(--rule)}
+.row .org{font-family:"Source Serif 4",Georgia,serif;font-size:21px;font-weight:600;line-height:1.2}
+.row .role{font-weight:600;margin-bottom:4px}
+.row p{color:var(--mute);margin:0}
+.now{display:inline-block;font-size:13px;font-weight:600;color:var(--red);margin-top:6px}
+
+.creds{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:24px 32px}
+.creds li{list-style:none;border-top:1px solid var(--rule);padding-top:12px}
+.creds ul{margin:0;padding:0}
+.creds strong{display:block}
+.creds span{color:var(--mute);font-size:15px}
+
+/* contact */
+.contact{background:var(--ink);color:var(--bg)}
+.contact h2{color:var(--bg)}
+.contact p{color:light-dark(#c9d2d7,#3a4a52)}
+.mail{font-family:"Source Serif 4",Georgia,serif;font-size:clamp(22px,4vw,34px);overflow-wrap:anywhere;display:block;margin:10px 0 22px;color:var(--bg)}
+.contact .btn{border-color:var(--bg);color:var(--bg)}
+.contact .btn.primary{border-color:var(--red);color:#fff}
+#copied{font-size:14px;margin-left:4px;align-self:center}
+footer{padding:20px max(5vw,16px);font-size:13px;color:var(--mute);border-top:1px solid var(--rule)}
+
+@media(min-width:900px){.hero{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:center}.fig{min-height:420px}}
+@media(max-width:600px){.grid .cell+.cell{padding-left:0;border-left:0}.row{grid-template-columns:minmax(0,1fr)}nav{gap:4px 16px}nav a:not(.tab){font-size:14px}.tab{margin-right:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.token{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav aria-label="Main">
+    <a class="tab" href="#top">Chandan Tyagi</a>
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="band">
+    <div class="wrap hero">
+      <div>
+        <h1>I turn manual insurance operations into systems that run on rules.</h1>
+        <p class="lede">Head of Operations at Bimaplan, an insurtech in Bengaluru that distributes insurance through NBFCs, microfinance institutions and digital platforms. I design operating models, build rule-based underwriting and claims processes, and put governance around them so they keep working at scale.</p>
+        <div class="meta">
+          <span><b>Based in</b> Bengaluru</span>
+          <span><b>MBA</b> IIM Kashipur</span>
+          <span><b>Lean Six Sigma</b> Green Belt</span>
+        </div>
+        <div class="btns">
+          <a class="btn primary" href="#contact">Get in touch</a>
+          <a class="btn" href="#work">See selected work</a>
+        </div>
+      </div>
+      <div>
+        <div class="fig" id="flow" role="img" aria-label="Process diagram: intake, rules, controls, review and outcome, connected in sequence"><svg id="flowsvg"></svg></div>
+        <div class="figcap">How I approach an operation: every step defined, every decision a rule, every exception reviewed.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="about">
+    <div class="wrap">
+      <h2>What I do</h2>
+      <div class="grid">
+        <div class="cell"><span class="kicker">Operating models</span><h3>Design how the work runs</h3><p>Operating frameworks, roadmaps and governance that give a growing company a clear way of working.</p></div>
+        <div class="cell"><span class="kicker">Underwriting</span><h3>Turn judgement into rules</h3><p>Rule-based underwriting engines that make decisions consistent, fast and auditable.</p></div>
+        <div class="cell"><span class="kicker">Claims and partners</span><h3>Build the plumbing</h3><p>Claims workflows, requirements documents and MIS for insurers and distribution partners.</p></div>
+        <div class="cell"><span class="kicker">Process excellence</span><h3>Remove the manual work</h3><p>Lean Six Sigma methods applied to find bottlenecks, automate calculations and fix data quality.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band panel" id="work">
+    <div class="wrap">
+      <h2>Selected work</h2>
+      <div class="work">
+        <article><span class="tag">Operating framework</span><h3>A company's first formal operating system</h3><p>Designed a 12-month transformation roadmap that the founder adopted as the company's first formal operating framework.</p></article>
+        <article><span class="tag">Diagnostics</span><h3>Operational gap analysis for leadership</h3><p>A data-backed review of six priority gaps, from manual data pipelines and missing reconciliation to partner churn and data governance, with a sequenced 12-month plan to close them.</p></article>
+        <article><span class="tag">Claims</span><h3>Claims infrastructure build-out</h3><p>Wrote the business requirements for a claims portal, specified internal and partner-facing MIS from about 14,400 historical claim records, and built a KPI analysis on the actual data.</p></article>
+        <article><span class="tag">Automation</span><h3>Bulk premium calculator</h3><p>Rebuilt premium calculation logic, including mortality-table lookups for single-life and joint-life cover, into a bulk tool validated to the rupee.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <div class="xp">
+        <div class="row">
+          <div><div class="org">Bimaplan</div><span class="now">Current</span></div>
+          <div><div class="role">Head of Operations</div><p>Running operations for insurance distribution through financial institutions, mainly group credit life. Leading the operating framework, claims infrastructure and partner operations.</p></div>
+        </div>
+        <div class="row">
+          <div><div class="org">Go Digit Life Insurance</div></div>
+          <div><div class="role">Deputy Manager, Process Head, Retail Operations</div><p>Led processes for retail life insurance operations, including underwriting rules, operating design and process transformation.</p></div>
+        </div>
+        <div class="row">
+          <div><div class="org">HPCL-Mittal Energy Limited</div></div>
+          <div><div class="role">Early career</div><p>Began in the energy sector after a degree in chemical engineering.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band panel">
+    <div class="wrap">
+      <h2>Education and credentials</h2>
+      <div class="creds">
+        <ul><li><strong>MBA</strong><span>Indian Institute of Management, Kashipur</span></li></ul>
+        <ul><li><strong>B.Tech, Chemical Engineering</strong><span>National Institute of Technology, Durgapur</span></li></ul>
+        <ul><li><strong>Lean Six Sigma Green Belt</strong><span>Process improvement</span></li></ul>
+        <ul><li><strong>Actuarial Common Entrance Test</strong><span>Institute of Actuaries of India</span></li></ul>
+        <ul><li><strong>Point of Sales Person licence</strong><span>Insurance distribution</span></li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band contact" id="contact">
+    <div class="wrap">
+      <h2>Let's talk</h2>
+      <p>Open to conversations about operations leadership, business transformation and building better processes.</p>
+      <a class="mail" href="mailto:chandan.tyagi38@gmail.com">chandan.tyagi38@gmail.com</a>
+      <div class="btns">
+        <a class="btn primary" href="mailto:chandan.tyagi38@gmail.com">Send an email</a>
+        <button class="btn" id="copy" type="button">Copy email address</button>
+        <span id="copied" aria-live="polite"></span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© 2026 Chandan Tyagi · Bengaluru, India</div></footer>
+
+<script>
+{
+  const steps = [
+    {t:'Intake', s:'Data in'},
+    {t:'Rules', s:'Decide'},
+    {t:'Controls', s:'Check'},
+    {t:'Review', s:'Exceptions'},
+    {t:'Outcome', s:'Done right'}
+  ];
+  const s = document.getElementById('flowsvg');
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const draw = () => {
+    const W = s.clientWidth, H = s.clientHeight;
+    if (!W || !H) return;
+    const narrow = W < 520;
+    const red = css('--red') || '#e3120b', slate = css('--slate') || '#2e6f8e', ink = css('--ink') || '#121212', bg = css('--bg') || '#fff';
+    const pts = steps.map((_, i) => {
+      if (narrow) {
+        const y = 40 + i * ((H - 80) / (steps.length - 1));
+        return {x: i % 2 ? W * 0.62 : W * 0.32, y};
+      }
+      const x = 60 + i * ((W - 120) / (steps.length - 1));
+      return {x, y: H * (i % 2 ? 0.62 : 0.38)};
+    });
+    const r = narrow ? 16 : 22;
+    let d = `M${pts[0].x},${pts[0].y}`;
+    for (let i = 1; i < pts.length; i++) {
+      const a = pts[i-1], b = pts[i];
+      d += narrow ? ` C${a.x},${(a.y+b.y)/2} ${b.x},${(a.y+b.y)/2} ${b.x},${b.y}` : ` C${(a.x+b.x)/2},${a.y} ${(a.x+b.x)/2},${b.y} ${b.x},${b.y}`;
+    }
+    const grid = [];
+    for (let gx = 20; gx < W; gx += 28) for (let gy = 20; gy < H; gy += 28) grid.push(`<circle cx="${gx}" cy="${gy}" r="1" fill="${slate}" opacity=".25"/>`);
+    const nodes = pts.map((p, i) => {
+      const lx = narrow ? (i % 2 ? p.x - r - 12 : p.x + r + 12) : p.x;
+      const ly = narrow ? p.y : (i % 2 ? p.y + r + 26 : p.y - r - 30);
+      const anchor = narrow ? (i % 2 ? 'end' : 'start') : 'middle';
+      const fill = i === 1 ? red : (i === 4 ? ink : bg);
+      const stroke = i === 1 ? red : ink;
+      const num = i === 1 || i === 4 ? bg : ink;
+      return `<g>
+        <circle cx="${p.x+3}" cy="${p.y+4}" r="${r}" fill="${slate}" opacity=".25"/>
+        <circle cx="${p.x}" cy="${p.y}" r="${r}" fill="${fill}" stroke="${stroke}" stroke-width="2"/>
+        <text x="${p.x}" y="${p.y+5}" text-anchor="middle" font-family="Inter,sans-serif" font-size="${narrow?13:15}" font-weight="600" fill="${num}">${i+1}</text>
+        <text x="${lx}" y="${ly}" text-anchor="${anchor}" font-family="Source Serif 4,Georgia,serif" font-size="${narrow?16:18}" font-weight="600" fill="${ink}">${steps[i].t}</text>
+        <text x="${lx}" y="${ly+17}" text-anchor="${anchor}" font-family="Inter,sans-serif" font-size="13" fill="${slate}">${steps[i].s}</text>
+      </g>`;
+    }).join('');
+    s.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    s.innerHTML = `${grid.join('')}
+      <path id="route" d="${d}" fill="none" stroke="${slate}" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round"/>
+      ${nodes}
+      ${reduce ? '' : `<circle class="token" r="7" fill="${red}" stroke="${bg}" stroke-width="2"><animateMotion dur="6s" repeatCount="indefinite"><mpath href="#route"/></animateMotion></circle>`}`;
+  };
+  const ro = new ResizeObserver(draw);
+  ro.observe(s);
+  const mo = new MutationObserver(draw);
+  mo.observe(document.documentElement, {attributes: true, attributeFilter: ['data-theme']});
+
+  const btn = document.getElementById('copy'), out = document.getElementById('copied');
+  btn.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText('chandan.tyagi38@gmail.com'); out.textContent = 'Copied'; }
+    catch (e) { out.textContent = 'Select the address above to copy it'; }
+  });
+}
+</script>
+</body>
+</html>
